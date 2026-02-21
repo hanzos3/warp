@@ -6,7 +6,7 @@
 replicaCount: 4
 
 image:
-  repository: minio/warp
+  repository: hanzos3/warp
   pullPolicy: IfNotPresent
   # Set version to use a specific release of Warp
   # version: latest
@@ -18,21 +18,21 @@ fullnameOverride: ""
 # Option 1: Define warp configuration inline (legacy method - commented out by default)
 # Uncomment and use this section if you prefer the legacy configuration method
 # warpConfiguration:
-#   # MinIO or other S3 Compatible server URL
+#   # S3 Compatible server URL
 #   s3ServerURL: minio-{0...3}.minio.default.svc.cluster.local:9000
 #   # Whether TLS enabled or not for above URL
 #   s3ServerTLSEnabled: false
 #   # Region for S3 Server
 #   s3ServerRegion: "us-east-1"
-#   # MinIO or other S3 Compatible server Access Key
+#   # S3 Compatible server Access Key
 #   s3AccessKey: "minio"
-#   # MinIO or other S3 Compatible server Secret Key
+#   # S3 Compatible server Secret Key
 #   s3SecretKey: "minio123"
 #   # Operation to be benchmarked (get / put / delete / list / stat / mixed)
 #   operationToBenchmark: get
 
 # warpJobArgs: {}
-#   # Full args can be found: https://github.com/minio/warp#usage
+#   # Full args can be found: https://github.com/hanzos3/warp#usage
 #   #
 #   # Number of objects to be used
 #   # objects: 1000
@@ -54,7 +54,7 @@ fullnameOverride: ""
 # Option 2: Provide complete YAML config file (default - recommended method)
 # This takes precedence over warpConfiguration if both are defined
 # The 'warp-client' property is automatically added based on replicaCount
-# Example config based on https://github.com/minio/warp/tree/master/yml-samples
+# Example config based on https://github.com/hanzos3/warp/tree/master/yml-samples
 configFile: |
   warp:
     api: v1

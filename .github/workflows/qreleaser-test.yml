@@ -44,8 +44,8 @@ jobs:
 
       - name: Configure git
         run: |
-          git config --global user.name "MinIO Bot"
-          git config --global user.email "dev@min.io"
+          git config --global user.name "Hanzo Bot"
+          git config --global user.email "dev@hanzo.ai"
 
       - name: Install Just
         uses: extractions/setup-just@v3

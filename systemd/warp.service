@@ -1,6 +1,6 @@
 [Unit]
 Description=Warp
-Documentation=https://github.com/minio/warp
+Documentation=https://github.com/hanzos3/warp
 Wants=network-online.target
 After=network-online.target
 AssertFileIsExecutable=/usr/bin/warp

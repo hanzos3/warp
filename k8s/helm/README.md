@@ -11,9 +11,9 @@ This chart bootstraps Warp deployment on a [Kubernetes](http://kubernetes.io) cl
 
 ### Configuring the Chart
 
-The [configuration](./values.yaml) file lists the configuration parameters. If you cloned the repo to `/home/warp`, edit the `/home/warp/k8s/helm/values.yaml` file to configure MinIO Server endpoint, credentials and other relevant fields explained in the [Warp documentation](https://github.com/minio/warp#usage).
+The [configuration](./values.yaml) file lists the configuration parameters. If you cloned the repo to `/home/warp`, edit the `/home/warp/k8s/helm/values.yaml` file to configure the S3 server endpoint, credentials and other relevant fields explained in the [Warp documentation](https://github.com/hanzos3/warp#usage).
 
-We recommend setting `replicaCount` as the same number of MinIO Pods.
+We recommend setting `replicaCount` as the same number of S3 server Pods.
 
 #### Configuration Methods
 

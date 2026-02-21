@@ -1,5 +1,5 @@
 /*
- * Warp (C) 2019-2020 MinIO, Inc.
+ * Warp (C) 2019-2020 Hanzo AI, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -54,10 +54,10 @@ func newClient(ctx *cli.Context) func() (cl *minio.Client, done func()) {
 	hosts := parseHosts(ctx.String("host"), ctx.Bool("resolve-host"))
 	switch len(hosts) {
 	case 0:
-		fatalIf(probe.NewError(errors.New("no host defined")), "Unable to create MinIO client")
+		fatalIf(probe.NewError(errors.New("no host defined")), "Unable to create S3 client")
 	case 1:
 		cl, err := getClient(ctx, hosts[0])
-		fatalIf(probe.NewError(err), "Unable to create MinIO client")
+		fatalIf(probe.NewError(err), "Unable to create S3 client")
 
 		return func() (*minio.Client, func()) {
 			return cl, func() {}
@@ -72,7 +72,7 @@ func newClient(ctx *cli.Context) func() (cl *minio.Client, done func()) {
 		clients := make([]*minio.Client, len(hosts))
 		for i := range hosts {
 			cl, err := getClient(ctx, hosts[i])
-			fatalIf(probe.NewError(err), "Unable to create MinIO client")
+			fatalIf(probe.NewError(err), "Unable to create S3 client")
 			clients[i] = cl
 		}
 		return func() (*minio.Client, func()) {
@@ -89,7 +89,7 @@ func newClient(ctx *cli.Context) func() (cl *minio.Client, done func()) {
 		clients := make([]*minio.Client, len(hosts))
 		for i := range hosts {
 			cl, err := getClient(ctx, hosts[i])
-			fatalIf(probe.NewError(err), "Unable to create MinIO client")
+			fatalIf(probe.NewError(err), "Unable to create S3 client")
 			clients[i] = cl
 		}
 		running := make([]int, len(hosts))
@@ -314,7 +314,7 @@ func mustGetSystemCertPool() *x509.CertPool {
 func newAdminClient(ctx *cli.Context) *madmin.AdminClient {
 	hosts := parseHosts(ctx.String("host"), ctx.Bool("resolve-host"))
 	if len(hosts) == 0 {
-		fatalIf(probe.NewError(errors.New("no host defined")), "Unable to create MinIO admin client")
+		fatalIf(probe.NewError(errors.New("no host defined")), "Unable to create S3 admin client")
 	}
 
 	cl, err := madmin.NewWithOptions(hosts[0], &madmin.Options{
@@ -322,7 +322,7 @@ func newAdminClient(ctx *cli.Context) *madmin.AdminClient {
 		Secure:    ctx.Bool("tls") || ctx.Bool("ktls"),
 		Transport: clientTransport(ctx),
 	})
-	fatalIf(probe.NewError(err), "Unable to create MinIO admin client")
+	fatalIf(probe.NewError(err), "Unable to create S3 admin client")
 	cl.SetAppInfo(appName, pkg.Version)
 	return cl
 }

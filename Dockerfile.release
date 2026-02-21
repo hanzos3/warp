@@ -1,5 +1,5 @@
 FROM alpine
-MAINTAINER MinIO Development "dev@min.io"
+MAINTAINER Hanzo AI "dev@hanzo.ai"
 EXPOSE 7761
 COPY warp /warp
 

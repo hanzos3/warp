@@ -1,5 +1,5 @@
 /*
- * Warp (C) 2019-2024 MinIO, Inc.
+ * Warp (C) 2019-2024 Hanzo AI, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -151,7 +151,7 @@ func (u *ui) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 }
 
 func (u *ui) View() string {
-	res := titleStyle.Render("WARP S3 Benchmark Tool by MinIO")
+	res := titleStyle.Render("WARP S3 Benchmark Tool by Hanzo")
 	res += "\n"
 
 	if ph := u.phase.Load(); ph != nil {

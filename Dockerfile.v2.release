@@ -5,11 +5,11 @@ ARG RELEASE
 ARG RELEASE_TYPE=release
 
 LABEL name="Warp" \
-      vendor="MinIO Inc <dev@min.io>" \
-      maintainer="MinIO Inc <dev@min.io>" \
+      vendor="Hanzo AI, Inc. <dev@hanzo.ai>" \
+      maintainer="Hanzo AI, Inc. <dev@hanzo.ai>" \
       version="${RELEASE}" \
-      org.opencontainers.image.source="https://github.com/minio/warp" \
-      summary="Warp is a S3 API Benchmark Tool" \
+      org.opencontainers.image.source="https://github.com/hanzos3/warp" \
+      summary="Hanzo S3 Warp - S3 API Benchmark Tool" \
       description="Warp is a high-performance S3 benchmarking tool for testing object storage systems."
 
 # Install ca-certificates

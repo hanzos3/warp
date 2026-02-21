@@ -1,11 +1,11 @@
 # Example values file using configFile option instead of warpConfiguration
-# This example demonstrates how to use a full YAML config from https://github.com/minio/warp/tree/master/yml-samples
+# This example demonstrates how to use a full YAML config from https://github.com/hanzos3/warp/tree/master/yml-samples
 # Note: The warp-client property is automatically added by the Helm chart based on replicaCount
 
 replicaCount: 4
 
 image:
-  repository: minio/warp
+  repository: hanzos3/warp
   pullPolicy: IfNotPresent
 
 # Full YAML configuration for warp

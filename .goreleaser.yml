@@ -49,10 +49,10 @@ changelog:
     - '^test:'
 nfpms:
   -
-    vendor: MinIO Inc.
-    homepage: https://github.com/minio/warp
-    maintainer: MinIO <minio@minio.io>
-    description: S3 API Benchmark Tool
+    vendor: Hanzo AI, Inc.
+    homepage: https://github.com/hanzos3/warp
+    maintainer: Hanzo AI <dev@hanzo.ai>
+    description: Hanzo S3 Warp - S3 API Benchmark Tool
     license: GNU Affero General Public License v3.0
     formats:
       - deb
@@ -75,7 +75,7 @@ dockers:
     goarch: amd64
     dockerfile: Dockerfile.release
   - image_templates:
-      - "quay.io/minio/warp:{{ .Tag }}-amd64"
+      - "ghcr.io/hanzos3/warp:{{ .Tag }}-amd64"
     use: buildx
     goarch: amd64
     ids:
@@ -84,7 +84,7 @@ dockers:
     build_flag_templates:
       - "--platform=linux/amd64"
   - image_templates:
-      - "quay.io/minio/warp:{{ .Tag }}-arm64"
+      - "ghcr.io/hanzos3/warp:{{ .Tag }}-arm64"
     use: buildx
     goarch: arm64
     ids:
@@ -93,7 +93,7 @@ dockers:
     build_flag_templates:
       - "--platform=linux/arm64"
   - image_templates:
-      - "minio/warp:{{ .Tag }}-amd64"
+      - "hanzos3/warp:{{ .Tag }}-amd64"
     use: buildx
     goarch: amd64
     ids:
@@ -102,7 +102,7 @@ dockers:
     build_flag_templates:
       - "--platform=linux/amd64"
   - image_templates:
-      - "minio/warp:{{ .Tag }}-arm64"
+      - "hanzos3/warp:{{ .Tag }}-arm64"
     use: buildx
     goarch: arm64
     ids:
@@ -111,19 +111,19 @@ dockers:
     build_flag_templates:
       - "--platform=linux/arm64"
 docker_manifests:
-  - name_template: minio/warp:{{ .Tag }}
+  - name_template: hanzos3/warp:{{ .Tag }}
     image_templates:
-      - minio/warp:{{ .Tag }}-amd64
-      - minio/warp:{{ .Tag }}-arm64
-  - name_template: minio/warp:latest
+      - hanzos3/warp:{{ .Tag }}-amd64
+      - hanzos3/warp:{{ .Tag }}-arm64
+  - name_template: hanzos3/warp:latest
     image_templates:
-      - minio/warp:{{ .Tag }}-amd64
-      - minio/warp:{{ .Tag }}-arm64
-  - name_template: quay.io/minio/warp:{{ .Tag }}
+      - hanzos3/warp:{{ .Tag }}-amd64
+      - hanzos3/warp:{{ .Tag }}-arm64
+  - name_template: ghcr.io/hanzos3/warp:{{ .Tag }}
     image_templates:
-      - quay.io/minio/warp:{{ .Tag }}-amd64
-      - quay.io/minio/warp:{{ .Tag }}-arm64
-  - name_template: quay.io/minio/warp:latest
+      - ghcr.io/hanzos3/warp:{{ .Tag }}-amd64
+      - ghcr.io/hanzos3/warp:{{ .Tag }}-arm64
+  - name_template: ghcr.io/hanzos3/warp:latest
     image_templates:
-      - quay.io/minio/warp:{{ .Tag }}-amd64
-      - quay.io/minio/warp:{{ .Tag }}-arm64
+      - ghcr.io/hanzos3/warp:{{ .Tag }}-amd64
+      - ghcr.io/hanzos3/warp:{{ .Tag }}-arm64

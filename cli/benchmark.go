@@ -1,5 +1,5 @@
 /*
- * Warp (C) 2019-2020 MinIO, Inc.
+ * Warp (C) 2019-2020 Hanzo AI, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -51,7 +51,7 @@ var benchFlags = []cli.Flag{
 	},
 	cli.StringFlag{
 		Name:  "serverprof",
-		Usage: "Run MinIO server profiling during benchmark; possible values are 'cpu', 'mem', 'block', 'mutex' and 'trace'.",
+		Usage: "Run S3 server profiling during benchmark; possible values are 'cpu', 'mem', 'block', 'mutex' and 'trace'.",
 		Value: "",
 	},
 	cli.DurationFlag{

@@ -1,5 +1,5 @@
 /*
- * Warp (C) 2019-2024 MinIO, Inc.
+ * Warp (C) 2019-2024 Hanzo AI, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by

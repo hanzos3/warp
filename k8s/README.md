@@ -20,7 +20,7 @@ warp-2   1/1     Running   0          7m8s
 warp-3   1/1     Running   0          7m17s
 ```
 
-Now prepare your *warp-job.yaml* (we have included a sample please edit for your needs) to benchmark your MinIO cluster
+Now prepare your *warp-job.yaml* (we have included a sample please edit for your needs) to benchmark your S3 cluster
 ```
 ~ kubectl create -f warp-job.yaml
 ```
@@ -111,7 +111,7 @@ This method provides access to all Warp YAML configuration options including:
 - And more
 
 For complete configuration examples, see:
-- [Warp YAML Samples](https://github.com/minio/warp/tree/master/yml-samples)
+- [Warp YAML Samples](https://github.com/hanzos3/warp/tree/master/yml-samples)
 - [Helm Configuration Guide](./helm/CONFIG.md)
 - [Example values file](./helm/values-configfile-example.yaml)
 

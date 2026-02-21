@@ -1,5 +1,5 @@
 /*
- * Warp (C) 2019-2023 MinIO, Inc.
+ * Warp (C) 2019-2023 Hanzo AI, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -40,7 +40,7 @@ var fanoutFlags = []cli.Flag{
 // Fanout command.
 var fanoutCmd = cli.Command{
 	Name:   "fanout",
-	Usage:  "benchmark fan-out of objects on MinIO servers",
+	Usage:  "benchmark fan-out of objects on S3 servers",
 	Action: mainFanout,
 	Before: setGlobalsFromContext,
 	Flags:  combineFlags(globalFlags, ioFlags, fanoutFlags, genFlags, benchFlags, analyzeFlags),

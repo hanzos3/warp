@@ -19,11 +19,11 @@ warp:
   bench-data:
 
   # Connect to warp clients and run benchmarks there.
-  # See https://github.com/minio/warp?tab=readme-ov-file#distributed-benchmarking
+  # See https://github.com/hanzos3/warp?tab=readme-ov-file#distributed-benchmarking
   # Can be a single value or a list.
   warp-client:
 
-  # Run MinIO server profiling during benchmark;
+  # Run S3 server profiling during benchmark;
   # possible values are 'cpu', 'cpuio', 'mem', 'block', 'mutex', 'threads' and 'trace'.
   # Can be single value or a list.
   server-profile:
@@ -41,9 +41,9 @@ warp:
     # The benchmark will be run against all hosts concurrently.
     # Multiple servers can be specified with ellipsis notation;
     # for example '10.0.0.{1...10}:9000' specifies 10 hosts.
-    # See more at https://github.com/minio/warp?tab=readme-ov-file#multiple-hosts
+    # See more at https://github.com/hanzos3/warp?tab=readme-ov-file#multiple-hosts
     host:
-      - 'play.min.io'
+      - 's3.hanzo.ai'
 
     # Use TLS for calls.
     tls: true
@@ -52,7 +52,7 @@ warp:
     insecure: false
 
     # Stream benchmark statistics to Influx DB instance.
-    # See more at https://github.com/minio/warp?tab=readme-ov-file#influxdb-output
+    # See more at https://github.com/hanzos3/warp?tab=readme-ov-file#influxdb-output
     influxdb: ''
 
     # Bucket to use for benchmark data.
@@ -76,7 +76,7 @@ warp:
     # Upload enough objects to ensure that any remote caching is bypassed.
     objects: 10000
 
-    # Enable extended MinIO ListObjects with metadata,
+    # Enable extended S3 ListObjects with metadata,
     # by default this benchmarking uses ListObjectsV2 API
     metadata: false
 
@@ -93,7 +93,7 @@ warp:
       versions: 2
 
       # Randomize the size of each object within certain constraints.
-      # See https://github.com/minio/warp?tab=readme-ov-file#random-file-sizes
+      # See https://github.com/hanzos3/warp?tab=readme-ov-file#random-file-sizes
       rand-size: false
 
       # Force specific size of each multipart part.
@@ -102,7 +102,7 @@ warp:
 
     # Use automatic termination when traffic stabilizes.
     # Can not be used with distributed warp setup.
-    # See https://github.com/minio/warp?tab=readme-ov-file#automatic-termination
+    # See https://github.com/hanzos3/warp?tab=readme-ov-file#automatic-termination
     autoterm:
       enabled: false
       dur: 10s

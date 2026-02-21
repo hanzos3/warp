@@ -70,7 +70,7 @@ helm install my-warp ./k8s/helm --set-file configFile=my-warp-config.yml
 ### Sample Configuration Files
 
 For complete examples of YAML configuration files, see:
-- [Warp YAML Samples](https://github.com/minio/warp/tree/master/yml-samples)
+- [Warp YAML Samples](https://github.com/hanzos3/warp/tree/master/yml-samples)
 - `values-configfile-example.yaml` in this directory
 
 ### Migration Guide

@@ -1,5 +1,5 @@
 /*
- * Warp (C) 2019-2023 MinIO, Inc.
+ * Warp (C) 2019-2023 Hanzo AI, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -37,7 +37,7 @@ var snowballFlags = []cli.Flag{
 	},
 	cli.BoolFlag{
 		Name:  "compress",
-		Usage: "Compress each snowball file. Available for MinIO servers only.",
+		Usage: "Compress each snowball file. Available for Hanzo S3 servers only.",
 	},
 }
 

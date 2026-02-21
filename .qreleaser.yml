@@ -9,12 +9,12 @@ goreleaser_config: .goreleaser/qreleaser.yaml
 use_semver: true  # Requires Q_VERSION_TAG env var
 
 # Distribution
-dl_upload_enabled: true  # Upload binaries to dl.min.io
+dl_upload_enabled: false
 
 # Container images
 containers:
   image:
-    - quay.io/minio/aistor/warp
+    - ghcr.io/hanzos3/warp
   archs: [amd64, arm64]
   fips_enabled: false
   dockerfile: Dockerfile.v2.release
@@ -25,5 +25,5 @@ packaging:
   app_name: warp
   license: "AGPLv3"
   service_file:
-    url: https://raw.githubusercontent.com/minio/warp/master/systemd/warp.service
+    url: https://raw.githubusercontent.com/hanzos3/warp/master/systemd/warp.service
     dest: warp.service

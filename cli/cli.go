@@ -1,5 +1,5 @@
 /*
- * Warp (C) 2019-2020 MinIO, Inc.
+ * Warp (C) 2019-2020 Hanzo AI, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -214,11 +214,11 @@ func registerApp(name string, appCmds []cli.Command) *cli.App {
 	}
 
 	app.HideHelpCommand = true
-	app.Usage = "Benchmark tool for S3 compatible object storage systems.\n\tFor usage details see https://github.com/minio/warp"
+	app.Usage = "Benchmark tool for S3 compatible object storage systems.\n\tFor usage details see https://github.com/hanzos3/warp"
 	app.Commands = commands
-	app.Author = "MinIO, Inc."
+	app.Author = "Hanzo AI, Inc."
 	app.Version = pkg.Version + " - " + pkg.ShortCommitID
-	app.Copyright = "(c) 2020-2024 MinIO, Inc."
+	app.Copyright = "(c) 2020-2026 Hanzo AI, Inc."
 	app.Compiled, _ = time.Parse(time.RFC3339, pkg.ReleaseTime)
 	app.Flags = append(app.Flags, profileFlags...)
 	app.Flags = append(app.Flags, globalFlags...)
