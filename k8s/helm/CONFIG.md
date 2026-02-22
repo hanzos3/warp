@@ -13,8 +13,8 @@ configFile: |
     benchmark: mixed
     remote:
       region: us-east-1
-      access-key: 'minio'
-      secret-key: 'minio123'
+      access-key: 'hanzo'
+      secret-key: 'hanzo123'
       host:
         - 'minio-{0...3}.minio.default.svc.cluster.local:9000'
       tls: false
@@ -99,8 +99,8 @@ warpConfiguration:
   s3ServerURL: minio-{0...3}.minio.default.svc.cluster.local:9000
   s3ServerTLSEnabled: false
   s3ServerRegion: "us-east-1"
-  s3AccessKey: "minio"
-  s3SecretKey: "minio123"
+  s3AccessKey: "hanzo"
+  s3SecretKey: "hanzo123"
   operationToBenchmark: get
 
 warpJobArgs:

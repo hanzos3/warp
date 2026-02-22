@@ -75,8 +75,8 @@ Edit `values.yaml` with basic configuration:
 ```yaml
 warpConfiguration:
   s3ServerURL: minio-{0...3}.minio.default.svc.cluster.local:9000
-  s3AccessKey: "minio"
-  s3SecretKey: "minio123"
+  s3AccessKey: "hanzo"
+  s3SecretKey: "hanzo123"
   operationToBenchmark: mixed
 ```
 
