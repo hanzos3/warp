@@ -22,10 +22,10 @@ configFile: |
 
     remote:
       region: us-east-1
-      access-key: 'minioadmin'
-      secret-key: 'minioadmin'
+      access-key: 'hanzo'
+      secret-key: 'hanzo-secret'
       host:
-        - 'minio-{0...3}.minio.default.svc.cluster.local:9000'
+        - 'hanzo-s3-{0...3}.hanzo-s3.default.svc.cluster.local:9000'
       tls: true
       insecure: true
       bucket: warp-benchmark-bucket

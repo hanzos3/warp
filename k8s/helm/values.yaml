@@ -19,15 +19,15 @@ fullnameOverride: ""
 # Uncomment and use this section if you prefer the legacy configuration method
 # warpConfiguration:
 #   # S3 Compatible server URL
-#   s3ServerURL: minio-{0...3}.minio.default.svc.cluster.local:9000
+#   s3ServerURL: hanzo-s3-{0...3}.hanzo-s3.default.svc.cluster.local:9000
 #   # Whether TLS enabled or not for above URL
 #   s3ServerTLSEnabled: false
 #   # Region for S3 Server
 #   s3ServerRegion: "us-east-1"
 #   # S3 Compatible server Access Key
-#   s3AccessKey: "minio"
+#   s3AccessKey: "hanzo"
 #   # S3 Compatible server Secret Key
-#   s3SecretKey: "minio123"
+#   s3SecretKey: "hanzo-secret"
 #   # Operation to be benchmarked (get / put / delete / list / stat / mixed)
 #   operationToBenchmark: get
 
@@ -65,13 +65,13 @@ configFile: |
     # Note: warp-client is auto-generated, no need to specify it
     remote:
       region: us-east-1
-      access-key: 'minioadmin'
-      secret-key: 'minioadmin'
+      access-key: 'hanzo'
+      secret-key: 'hanzo-secret'
       host:
-        - 'minio-0.minio.default.svc.cluster.local:9000'
-        - 'minio-1.minio.default.svc.cluster.local:9000'
-        - 'minio-2.minio.default.svc.cluster.local:9000'
-        - 'minio-3.minio.default.svc.cluster.local:9000'
+        - 'hanzo-s3-0.hanzo-s3.default.svc.cluster.local:9000'
+        - 'hanzo-s3-1.hanzo-s3.default.svc.cluster.local:9000'
+        - 'hanzo-s3-2.hanzo-s3.default.svc.cluster.local:9000'
+        - 'hanzo-s3-3.hanzo-s3.default.svc.cluster.local:9000'
       tls: true
       insecure: true
     params:
